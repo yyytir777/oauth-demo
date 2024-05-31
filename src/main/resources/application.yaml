@@ -1,0 +1,23 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/oauth2?serverTimezone=Asia/Seoul
+    username: root
+    password: 1108
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+oauth:
+  kakao:
+    client_id: 4e8fa0ea21113b62308749cbc348a320
+    redirect_uri: http://localhost:3000/oauth/kakao/callback
+
+token:
+  secret: kacbnioqhdfunq23rinqicvhq908hciu21b3rbv9q8f023fbsavchqp09weyrp9qb # ??? ???
+  access-token-expiration-time: 90000000  # 15? 1000(ms) x 60(s) x 15(m)
+  refresh-token-expiration-time: 1209600000 # 2? 1000(ms) x 60 (s) x 60(m) x 24(h) x 14(d)
